@@ -1,10 +1,10 @@
 ## ACS 2230 - NODE-REDDIT-CLONE Tutorial 
 
-Based on instruction from this repo 
+Based on instruction from this [repo](https://github.com/Tech-at-DU/Node-Reddit-Clone) 
 
 ### Wireframe:
 
-0.0 - REDDIT
+0.0 - NodeJS REDDIT
  
 1.0 - HOME
 
