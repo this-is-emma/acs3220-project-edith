@@ -1,22 +1,26 @@
-import express from 'express';
-import { engine } from 'express-handlebars';
-
+const express =  require('express');
+const { engine } =  require('express-handlebars');
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+require('./controllers/posts')(app);
+require('./data/reddit-db');
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
+//ROUTES 
+
+//* Home
 app.get('/', (req, res) => {
   res.render('home');
 });
 
-// Cases Resource
 
-// New
-
-app.get('/cases/new', (req, res) => {
-  res.render('cases-new', {});
+//* New post (get)
+app.get('/posts/new', (req, res) => {
+  res.render('posts-new', {});
 });
 
 app.listen(3000);
