@@ -4,7 +4,7 @@
   "description": "ACS2230 assignment",
   "main": "reddit.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,10 @@
     "express-handlebars": "^7.0.4",
     "express-validator": "^6.15.0",
     "mongoose": "^6.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.2.0"
   }
 }
