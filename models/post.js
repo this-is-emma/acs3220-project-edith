@@ -1,8 +1,8 @@
 //MODEL
 const { Schema, model, mongoose } = require('mongoose');
 
-// const postSchema = new Schema({
-//   postId: { type: mongoose.SchemaTypes.ObjectId,required: true, index: true },
+const postSchema = new Schema({
+  // id: { type: mongoose.SchemaTypes.ObjectId, required: true, index: true },
   title: { type: String, required: true },
   url: { type: String, required: true },
   summary: { type: String, required: true },
