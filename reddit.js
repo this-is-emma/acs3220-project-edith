@@ -4,6 +4,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 require('./controllers/posts')(app);
+require('./controllers/comments.js')(app);
 require('./data/reddit-db');
 
 app.engine('handlebars', engine());
