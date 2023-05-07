@@ -1,12 +1,15 @@
 const express =  require('express');
+require('dotenv').config();
 const { engine } =  require('express-handlebars');
+const cookieParser = require('cookie-parser');
 const app = express();
+app.use(cookieParser()); // Add this after you initialize express.
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+require('./controllers/auth.js')(app);
 require('./controllers/posts')(app);
 require('./controllers/comments.js')(app);
 require('./data/reddit-db');
-
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
