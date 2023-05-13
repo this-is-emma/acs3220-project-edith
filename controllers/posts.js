@@ -20,13 +20,21 @@ module.exports = (app) => {
 
     // Look up a specific post 
     app.get('/post-show/:id', (req, res) => {
+        // const currentUser = req.user;
+        // Post.findById(req.params.id).lean().populate({ path:'comments', populate: { path: 'author' } }).populate('author')
+        // .then((post) => res.render('posts-show', { post, currentUser }))
+        // .catch((err) => {
+        //     console.log(err.message);
+        // });
+
         const currentUser = req.user;
-        Post.findById(req.params.id).lean().populate({ path:'comments', populate: { path: 'author' } }).populate('author')
+        Post.findById(req.params.id).populate('comments').lean()
         .then((post) => res.render('posts-show', { post, currentUser }))
         .catch((err) => {
-            console.log(err.message);
+          console.log(err.message);
         });
     });
+
 
     // CREATE
     app.post('/posts/new', (req, res) => {
@@ -54,12 +62,19 @@ module.exports = (app) => {
     
     // View Subreddit
     app.get('/n/:subreddit', (req, res) => {
-        const currentUser = req.user;
-        const { subreddit } = req.params;
-        Post.find({ subreddit }).lean().populate('author')
-            .then((posts) => res.render('posts-index', { posts, currentUser }))
-            .catch((err) => {
-            console.log(err);
+        // const currentUser = req.user;
+        // const { subreddit } = req.params;
+        // Post.find({ subreddit }).lean().populate('author')
+        //     .then((posts) => res.render('posts-index', { posts, currentUser }))
+        //     .catch((err) => {
+        //     console.log(err);
+        // });
+
+        const { user } = req;
+        Post.find({ subreddit: req.params.subreddit }).lean()
+        .then((posts) => res.render('posts-index', { posts, user }))
+        .catch((err) => {
+          console.log(err);
         });
     });
 };

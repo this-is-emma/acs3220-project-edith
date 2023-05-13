@@ -9,7 +9,7 @@ module.exports = (app) => {
     app.post('/sign-up', (req, res) => {
         // Create User and JWT
         const user = new User(req.body);
-        console.log(req.body)
+    
         user
         .save()
         .then(() => {
