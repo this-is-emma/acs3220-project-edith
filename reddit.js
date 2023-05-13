@@ -8,6 +8,7 @@ app.use(cookieParser()); // Add this after you initialize express.
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(checkAuth);
+app.use(express.static('public'));
 require('./controllers/auth.js')(app);
 require('./controllers/posts')(app);
 require('./controllers/comments.js')(app);
