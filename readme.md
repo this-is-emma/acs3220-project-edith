@@ -1,4 +1,4 @@
-## ACS 3220 - FINAL PROJECT
+## ACS 3220 - FINAL PROJECT 
 
 Based on instruction from this [repo](https://github.com/Tech-at-DU/Node-Reddit-Clone) 
 
