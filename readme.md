@@ -1,4 +1,4 @@
-## ACS 2230 - NODE-REDDIT-CLONE Tutorial 
+## ACS 3220 - FINAL PROJECT
 
 Based on instruction from this [repo](https://github.com/Tech-at-DU/Node-Reddit-Clone) 
 
