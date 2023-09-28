@@ -4,6 +4,7 @@
   "description": "ACS2230 assignment",
   "main": "reddit.js",
   "scripts": {
+    "start": "node reddit.js",
     "test": "mocha --exit"
   },
   "repository": {

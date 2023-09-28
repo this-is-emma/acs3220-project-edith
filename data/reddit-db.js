@@ -2,16 +2,17 @@
 const mongoose = require('mongoose');
 assert = require('assert');
 
-const url = 'mongodb://localhost/reddit-db';
+const url = process.env.MONGODB_URI;
 mongoose.connect(
     url,
     {
+      dbName: process.env.DB_NAME,
       useNewUrlParser: true, useUnifiedTopology: true,
     },
     (err) => {
       assert.equal(null, err);
       console.log("Connected successfully to database");
-  
+
       //db.close(); turn on for testing
     }
   );
