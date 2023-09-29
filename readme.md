@@ -1,14 +1,16 @@
 # ACS 3220 - FINAL PROJECT 
 
-## Reddit Clone App
+## Reddit Clone App at [Ninety-nine.ca](http://acs3220-project-edith.dev.ninety-nine.ca/)
 
-| Health Check (UpTime Robot| 
-|----------|
-| [Link](https://stats.uptimerobot.com/Ng8Z3iVjJy) | 
+[Health Check (UpTime Robot](https://stats.uptimerobot.com/Ng8Z3iVjJy) 
 
-[![Status](https://img.shields.io/badge/Status-Success-brightgreen.svg)](https://example.com)
+[![Status](https://img.shields.io/badge/Status-operational-brightgreen.svg)](https://example.com)
 
-This is a simple Reddit clone application built using Node.js and MongoDB.
+[![Build & Deploy](https://github.com/this-is-emma/acs3220-project-edith/actions/workflows/deploy.yml/badge.svg)](https://github.com/this-is-emma/acs3220-project-edith/actions/workflows/deploy.yml)
+
+Deployed on CapRover using [custom domain](http://acs3220-project-edith.dev.ninety-nine.ca/) 
+
+This is a simple Reddit clone application built using Node.js and MongoDB. You can visit at this a
 
 ### Prerequisites
 
@@ -67,4 +69,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Acknowledgments
 
 This project is based on the Reddit platform.
-  
