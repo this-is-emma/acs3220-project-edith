@@ -1,30 +1,70 @@
-## ACS 3220 - FINAL PROJECT 
+# ACS 3220 - FINAL PROJECT 
 
-Based on instruction from this [repo](https://github.com/Tech-at-DU/Node-Reddit-Clone) 
+## Reddit Clone App
 
-### Wireframe:
+| Health Check (UpTime Robot| 
+|----------|
+| [Link](https://stats.uptimerobot.com/Ng8Z3iVjJy) | 
 
-0.0 - NodeJS REDDIT
- 
-1.0 - HOME
+[![Status](https://img.shields.io/badge/Status-Success-brightgreen.svg)](https://example.com)
 
-    1.1 - Header
-          1.1.1 - Logo
-          1.1.2 - Search bar
-          1.1.3 - Button: Download app
-          1.1.4 - Button: Log In
-          1.1.5 - Icon
+This is a simple Reddit clone application built using Node.js and MongoDB.
 
-    1.2 - left Navbar
-          1.2.1 - Icon group: Feed
-          1.2.2 - Icon group: Recent
-          1.2.3 - Icon group: Topic
-          1.2.4 - Text: Create an account to follow your favorite communities and start taking part in conversations.
-          1.2.5 - Button: Join Reddit
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+    Docker installed on your local machine.
+
+### Getting Started
+
+To get this application up and running, follow these steps:
+
+Clone this repository to your local machine:
+
+    bash
+
+    git clone [https://github.com/yourusername/reddit-clone.git](https://github.com/this-is-emma/acs3220-project-edith)
+
+### Navigate to the project's directory:
+
+    bash
+    
+    cd acs3220-project-edith
+
+### Build and start the Docker containers:
+
+    bash
+    
+    docker-compose up --build
+
+This command will start two containers: one for MongoDB and one for the Reddit Clone Node.js app.
+
+The Reddit Clone app should now be running. You can access it in your web browser by navigating to:
+
+    http://localhost:4000
 
 
-    1.3 - Body
-          1.3.1 - Images Grid:
-          1.3.2 - Posts
-          1.4.2 - Button: Back to top
-```
+### Stopping the Application
+
+To stop the application and shut down the Docker containers, press Ctrl + C in the terminal where the docker-compose command is running. Then, to remove the containers, run:
+
+    bash
+    
+    docker-compose down
+
+### Configuration
+
+The Node.js app is configured to run on port 3000 within the container and is exposed on port 4000 on your local machine. 
+You can change the local port by modifying the ports section in the docker-compose.yml file if needed.
+
+MongoDB is set up with a volume to persist data in the mongo_data volume. You can modify the MongoDB configuration by editing the mongo_db service in the docker-compose.yml file.
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgments
+
+This project is based on the Reddit platform.
+  
