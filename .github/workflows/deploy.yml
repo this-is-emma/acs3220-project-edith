@@ -30,7 +30,21 @@ jobs:
         with:
           command: c
           cwd: "./"
-          files: .
+          files: |
+            controllers/
+            data/
+            middleware/
+            models/
+            public/
+            util/
+            views/
+            docker-compose.yml
+            .env
+            Dockerfile
+            package.json
+            package-lock.json
+            reddit.js
+          
           outPath: deploy.tar
 
       - name: Deploy App to CapRover
